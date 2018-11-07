@@ -1,0 +1,60 @@
+extends layout
+
+block content
+    link(rel='stylesheet',href='home.css')
+    .container
+        
+        .row
+            .col-sm-12
+                .jumbotron.jumbotron-fluid.jumbotron-home.bg-transparent
+                    .container.header-color.txt-center
+                        h1.display-3 Mr. &amp Mrs. Chappell
+                        img.img-fluid.img-center.img-size-1.img-border(src="https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fhomepage%2FIMG_0532.jpg?alt=media&token=6822d141-581e-4bf8-9baa-4697e423053c",alt="Home Picture")
+        hr
+        h2.txt-light.txt-center.display-3 View Our Wedding
+        .row
+            .col-sm-12.col-md-6
+                .photobox.photobox_style
+                    a(href='/ceremony')
+                        .photobox_previewbox
+                            img.photobox_preview.img-fluid.img-center(src="https://firebasestorage.googleapis.com/v0/b/nodemoduletest.appspot.com/o/Assets%2FIMG_0539.jpg?alt=media&token=21e8ad1c-fdd8-4370-bf7c-13e0ceed8f3c")
+                            span.photobox_label Ceremony
+                                          
+            .col-sm-12.col-md-6
+                .photobox.photobox_style
+                    a(href="/bridengroom")
+                        .photobox_previewbox
+                            img.photobox_preview.img-fluid.img-center(src="https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fhomepage%2Fgal1.jpg?alt=media&token=fa23f27f-e5e3-4e78-9222-2277ed001cc9",alt="Bride & Groom")
+                            span.photobox_label Bride & Groom
+                            
+        .row
+            .col-sm-12.col-md-6
+                .photobox.photobox_style
+                    a(href="/bride")
+                        .photobox_previewbox
+                            img.photobox_preview.img-fluid.img-center(src="https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fhomepage%2FIMG_7650.jpg?alt=media&token=bf99e7f6-7463-46d2-8e2b-34bb7ebdc77f",alt="Bride")
+                            span.photobox_label The Bride
+            .col-sm-12.col-md-6
+                .photobox.photobox_style
+                    a(href="/groom")
+                        .photobox_previewbox
+                            img.photobox_preview.img-fluid.img-center(src="https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fhomepage%2FIMG_0690.jpg?alt=media&token=7773de19-fe01-4420-b0fa-7934c58941d7",alt="groomsmen")
+                            span.photobox_label The Groom
+    #home.home-footer.home-footer-container
+        hr
+        .row
+            .col-sm-12.col-lg-2
+                img.img-fluid.img-center(src='https://firebasestorage.googleapis.com/v0/b/nodemoduletest.appspot.com/o/Assets%2FFooterLogo.png?alt=media&token=00db80d1-def5-4934-b3f1-df1463b917b0')
+            .col-sm-12.col-lg-10
+                .container
+                    .row
+                        .col-sm-12
+                            blockquote.quote-card
+                                p 
+                                    | Legends say that hummingbirds float free of time, carrying our hopes for love, joy and celebration. Hummingbirds open our eyes to the wonder of the world and inspire us to open
+                                    | our hearts to loved ones and friends. Like a hummingbird, we aspire to hover and to savor each moment as it passes, embrace all that life has to offer and to celebrate the joy
+                                    | of everytday. The hummingbird's delicate grace reminds us that life is rich, beauty is eveyrwhere, every presonal connection has meaning and that laughter is life's sweetest creation.
+                    .row
+                        .col-sm-12.citation.txt-teal
+                            cite Anonymous
+                            

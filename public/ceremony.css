@@ -1,0 +1,30 @@
+p{
+    line-height: 2;
+    font-size: 1.1rem;
+}
+.jumbotron-custom{
+    padding: 5px;   
+}
+
+.img-border{
+    border-radius: 10px;
+    border-width: medium;
+    border-style: double;
+    border-color: #fdddcf;
+}
+
+@media (max-width: 600px){
+    h1.display-3{
+        font-size: 3rem;
+    }
+    h4.display-4{
+        font-size: 1rem;
+    }
+    h2, p{
+        margin-top: 1.5rem;
+    }
+    p{
+        font-size: .85rem;
+        line-height: 1.4;
+    }
+}

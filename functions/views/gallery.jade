@@ -1,0 +1,76 @@
+extends layout
+
+block content
+    link(rel='stylesheet',href='home.css')
+    link(rel='stylesheet',href='gallery.css')
+    .container
+        .row(style='box-shadow: none')
+            .col-sm-12
+                .jumbotron.jumbotron-fluid.jumbotron-home.bg-transparent
+                    .container.header-color.txt-center
+                        h1.display-3 Gallery Header
+        .row
+            .col-sm-12
+                .gal
+                    .photobox.photobox_style
+                        
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='1', onmouseover='getLikes(1)')
+                            img#gal1.photobox_preview.img-fluid.img-center.gal-item       
+                            span.photobox_label
+                                a#pic1(onclick='likePicture(1)',title='Like Photo')
+
+                    .photobox.photobox_style                 
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='2',onmouseover='getLikes(2)')
+                            img#gal2.photobox_preview.img-fluid.img-center
+                            span.photobox_label
+                                a#pic2(onclick='likePicture(2)',title='Like Photo')
+
+                    .photobox.photobox_style
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='3',onmouseover='getLikes(3)')
+                            img#gal3.photobox_preview.img-fluid.img-center
+                            span.photobox_label
+                                a#pic3(onclick='likePicture(3)',title='Like Photo')
+
+                    .photobox.photobox_style
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='4',onmouseover='getLikes(4)')
+                            img#gal4.photobox_preview.img-fluid.img-center
+                            span.photobox_label
+                                a#pic4(onclick='likePicture(4)',title='Like Photo')
+
+                    .photobox.photobox_style
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='5',onmouseover='getLikes(5)')
+                            img#gal5.photobox_preview.img-fluid.img-center
+                            span.photobox_label
+                                a#pic5(onclick='likePicture(5)',title='Like Photo')
+
+                    .photobox.photobox_style
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='6',onmouseover='getLikes(6)')
+                            img#gal6.photobox_preview.img-fluid.img-center
+                            span.photobox_label
+                                a#pic6(onclick='LikePicture(6)',title='Like Photo')
+        .row
+            .col-sm-12
+                hr
+        
+        
+        
+    #picturePopupModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+            .modal-content.bg-transparent(style='box-shadow: none')
+                .modal-body
+                    img#modalimg.img-fluid.img-center
+                                      
+
+
+  
+
+        
+    script(src="loadGallery.js")
+
+              
