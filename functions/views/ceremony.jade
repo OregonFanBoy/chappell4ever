@@ -1,24 +1,304 @@
 extends layout
 
 block content
-    link(rel='stylesheet',href='ceremony.css')
+    
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css')
+    link(rel='stylesheet' href='main.css')
+    link(rel='stylesheet' href='ceremony.css')
     .container
         .row
             .col-sm-12
                 .jumbotron.jumbotron-fluid.jumbotron-custom.bg-transparent
                     .container.header-color.txt-center
                         h1.display-3 Our Ceremony
-                        h4.display-4 The start of new love
-        .row
-            .col-sm-12.col-lg-5.txt-teal
-                h1 A Special Day
-                p
-                    | On September 22, 2018. Frank and Amanda held a spical ceremony on the Rogue River in Gold Hill, Oregon at Tea Pot on Wheels.
-                    | The day was filled with excitement, joy and love with friends and family from all around. Frank and Amanda felt honored and privlaged to
-                    | have such a beautiful day in ceremony to share a lifetime of love and commitment with friends and family.
+                        h4.display-4 The start of a new adventure
+        .row.row-1
+            
+            .col-sm-12.col-lg-5
+                .content.is-large
+                    h1.desktop.txt-teal A Special Day
+                    p.txt-teal
+                        | On September 22, 2018. Frank and Amanda held a special ceremony on the Rogue River in Gold Hill, Oregon at Tea Pot on Wheels.
+                        | The day was filled with excitement, joy and love with friends and family from all around. Frank and Amanda felt honored and privlaged to
+                        | have such a beautiful day in ceremony to share a lifetime of love and commitment with friends and family. In case you missed the big day or just want to recap what took place, then you'll love what lays ahead.
             
             .col-sm-12.col-lg-7
-                img.img-fluid.img-center.img-border(src='https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fceremony%2FIMG_0895.jpg?alt=media&token=b661b1b6-ef83-49b8-a193-52582988b1b1', alt='MainCeremonyPicture')
+                h1.txt-teal.mobile.txt-center A Special Day
+                img.img-fluid.img-center.img-border-double.img-border-bronze(src='https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fceremony%2FIMG_0895.jpg?alt=media&token=b661b1b6-ef83-49b8-a193-52582988b1b1', alt='MainCeremonyPicture')
         hr
-            
-            
+        .row
+            .col-sm-12.txt-center.header-color
+                h3.display-2 See what took place
+                h6.display-4 Cast your vote on your favorite pictures
+                
+    
+        .row
+            .columns.is-multiline
+                .column.is-3
+                    .photobox.photobox_style.img-border-double.img-border-bronze
+                        
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='01', onmouseover='getLikes("01")')
+                            img#gal1.photobox_preview.img-fluid.img-center      
+                            span.photobox_label
+                                a#pic01(onclick='likePicture("01")',title='Like Photo') 
+                    
+                .column.is-3
+                    .columns.is-multiline
+                        .column.is-12
+                            .photobox.photobox_style.img-border-inset.img-border-off-white
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='02', onmouseover='getLikes("02")')
+                                    img#gal2.photobox_preview.img-fluid.img-center      
+                                    span.photobox_label
+                                        a#pic02(onclick='likePicture("02")',title='Like Photo') 
+
+
+                        .column.is-12
+                            .photobox.photobox_style.img-border-outset.img-border-teal
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='03', onmouseover='getLikes("03")')
+                                    img#gal3.photobox_preview.img-fluid.img-center      
+                                    span.photobox_label
+                                        a#pic03(onclick='likePicture("03")',title='Like Photo') 
+                            
+
+                .column.is-6
+                    .photobox.photobox_style.img-border-double.img-border-bronze
+                        
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='04', onmouseover='getLikes("04")')
+                            img#gal4.photobox_preview.img-fluid.img-center      
+                            span.photobox_label
+                                a#pic04(onclick='likePicture("04")',title='Like Photo') 
+
+
+
+                .column.is-6
+                    .photobox.photobox_style.img-border-groove.img-border-silver
+                        
+                        .photobox_previewbox
+                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='05', onmouseover='getLikes("05")')
+                            img#gal5.photobox_preview.img-fluid.img-center      
+                            span.photobox_label
+                                a#pic05(onclick='likePicture("05")',title='Like Photo') 
+                    
+                .column.is-4
+                    .columns.is-multiline
+                        .column.is-12
+                            .photobox.photobox_style.img-border-double.img-border-teal
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='06', onmouseover='getLikes("06")')
+                                    img#gal6.photobox_preview.img-fluid.img-center      
+                                    span.photobox_label
+                                        a#pic06(onclick='likePicture("06")',title='Like Photo') 
+                            
+
+                        .column.is-6
+                            #photoBoxContainer7.photobox.photobox_style.img-border-outset.img-border-bronze
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='07', onmouseover='getLikes("07")')
+                                    img#gal7.photobox_preview.img-fluid.img-center       
+                                    span.photobox_label
+                                        a#pic07(onclick='likePicture("07")',title='Like Photo') 
+                              
+                        .column
+                            #photoBoxContainer8.photobox.photobox_style.img-border-outset-reverse.img-border-off-white
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='08', onmouseover='getLikes("08")')
+                                    img#gal8.photobox_preview.img-fluid.img-center     
+                                    span.photobox_label
+                                        a#pic08(onclick='likePicture("08")',title='Like Photo') 
+                            
+                .column.is-2
+                    .columns.is-multiline
+                        .column.is-12
+                            #photoBoxContainer9.photobox.photobox_style.img-border-outset-reverse.img-border-bronze
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='09', onmouseover='getLikes("09")')
+                                    img#gal9.photobox_preview.img-fluid.img-center    
+                                    span.photobox_label
+                                        a#pic09(onclick='likePicture("09")',title='Like Photo')
+                            
+                        .column.is-12
+                            .photobox.photobox_style.img-border-double.img-border-off-white
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='10', onmouseover='getLikes("10")')
+                                    img#gal10.photobox_preview.img-fluid.img-center     
+                                    span.photobox_label
+                                        a#pic10(onclick='likePicture("10")',title='Like Photo') 
+                            
+                .column.is-4
+                    .columns.is-multiline
+                        .column.is-12
+                            .photobox.photobox_style.img-border-groove.img-border-bronze
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='11', onmouseover='getLikes("11")')
+                                    img#gal11.photobox_preview.img-fluid.img-center      
+                                    span.photobox_label
+                                        a#pic11(onclick='likePicture("11")',title='Like Photo') 
+                            
+                        .column.is-12
+                            .photobox.photobox_style.img-border-outset-reverse.img-border-off-white
+                        
+                                .photobox_previewbox
+                                    a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='12', onmouseover='getLikes("12")')
+                                    img#gal12.photobox_preview.img-fluid.img-center      
+                                    span.photobox_label
+                                        a#pic12(onclick='likePicture("12")',title='Like Photo') 
+                            
+                .column.is-8
+                    .columns.is-multiline
+                        .column.is-7
+                            .columns.is-multiline
+                                .column.is-6
+                                    .photobox.photobox_style.img-border-outset-reverse.img-border-off-white
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='13', onmouseover='getLikes("13")')
+                                            img#gal13.photobox_preview.img-fluid.img-center       
+                                            span.photobox_label
+                                                a#pic13(onclick='likePicture("13")',title='Like Photo') 
+                                    
+                                .column.is-6
+                                    #photoBoxContainer14.photobox.photobox_style.img-border-outset-reverse.img-border-off-white
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='14', onmouseover='getLikes("14")')
+                                            img#gal14.photobox_preview.img-fluid.img-center      
+                                            span.photobox_label
+                                                a#pic14(onclick='likePicture("14")',title='Like Photo') 
+                                    
+                                .column.is-12
+                                    .photobox.photobox_style.img-border-outset-reverse.img-border-off-white
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='15', onmouseover='getLikes("15")')
+                                            img#gal15.photobox_preview.img-fluid.img-center       
+                                            span.photobox_label
+                                                a#pic15(onclick='likePicture("15")',title='Like Photo') 
+                                
+                                .column
+                                .column.is-8
+                                    .photobox.photobox_style.img-border-groove.img-border-teal
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='16', onmouseover='getLikes("16")')
+                                            img#gal16.photobox_preview.img-fluid.img-center     
+                                            span.photobox_label
+                                                a#pic16(onclick='likePicture("16")',title='Like Photo') 
+                                .column    
+
+                        .column.is-5
+                            .columns.is-multiline
+                                .column.is-12
+                                    .photobox.photobox_style.img-border-groove.img-border-teal
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='17', onmouseover='getLikes("17")')
+                                            img#gal17.photobox_preview.img-fluid.img-center      
+                                            span.photobox_label
+                                                a#pic17(onclick='likePicture("17")',title='Like Photo') 
+                                    
+                                .column.is-12
+                                    .photobox.photobox_style.img-border-double.img-border-bronze
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='18', onmouseover='getLikes("18")')
+                                            img#gal18.photobox_preview.img-fluid.img-center       
+                                            span.photobox_label
+                                                a#pic18(onclick='likePicture("18")',title='Like Photo')
+                                    
+                                .column.is-12
+                                    .photobox.photobox_style.img-border-inset.img-border-silver
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='19', onmouseover='getLikes("19")')
+                                            img#gal19.photobox_preview.img-fluid.img-center     
+                                            span.photobox_label
+                                                a#pic19(onclick='likePicture("19")',title='Like Photo') 
+                                    
+                .column.is-5
+                    .columns.is-multiline
+                        .column.is-12
+                            .photobox.photobox_style.img-border-double.img-border-bronze
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='"20"', onmouseover='getLikes("20")')
+                                            img#gal20.photobox_preview.img-fluid.img-center      
+                                            span.photobox_label
+                                                a#pic20(onclick='likePicture("20")',title='Like Photo') 
+                        .column    
+                        .column.is-10
+                            .photobox.photobox_style.img-border-groove.img-border-silver
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='21', onmouseover='getLikes("21")')
+                                            img#gal21.photobox_preview.img-fluid.img-center      
+                                            span.photobox_label
+                                                a#pic21(onclick='likePicture("21")',title='Like Photo') 
+                        .column    
+                .column.is-4
+                    .columns.is-multiline
+                        #imgContainer22.column.is-12
+                            .photobox.photobox_style.img-border-outset.img-border-silver
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='22', onmouseover='getLikes("22")')
+                                            img#gal22.photobox_preview.img-fluid.img-center       
+                                            span.photobox_label
+                                                a#pic22(onclick='likePicture("22")',title='Like Photo')
+                            
+                        .coloumn.is-12
+                            .photobox.photobox_style.img-border-double.img-border-off-white
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='23', onmouseover='getLikes("23")')
+                                            img#gal23.photobox_preview.img-fluid.img-center      
+                                            span.photobox_label
+                                                a#pic23(onclick='likePicture("23")',title='Like Photo') 
+                            
+                .column.is-3
+                    .columns.is-multiline
+                        .column.is-12
+                            .photobox.photobox_style.img-border-outset-reverse.img-border-teal
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='24', onmouseover='getLikes("24")')
+                                            img#gal24.photobox_preview.img-fluid.img-center      
+                                            span.photobox_label
+                                                a#pic24(onclick='likePicture("24")',title='Like Photo') 
+                              
+                        .column.is-12
+                            .photobox.photobox_style.img-border-outset-reverse.img-border-off-white
+                        
+                                        .photobox_previewbox
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='25', onmouseover='getLikes("25")')
+                                            img#gal25.photobox_preview.img-fluid.img-center       
+                                            span.photobox_label
+                                                a#pic25(onclick='likePicture("25")',title='Like Photo') 
+                            
+        .row
+            .col-sm-12
+                hr
+                .columns.is-centered
+                    .column.is-half
+                        img(src='https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fceremony%2FIMG_7894.jpg?alt=media&token=468b079a-f8b8-4ee5-b158-cef6629de2b8')
+                hr
+    
+    #picturePopupModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+        .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+            .modal-content.bg-transparent(style='box-shadow: none')
+                .modal-body
+                    img#modalimg.img-fluid.img-center
+                .modal-footer
+                    a#modalLike(onclick='test(this)',title='Like Photo')
+    script(src='ceremony.js')
