@@ -9,6 +9,9 @@ p{
 hr{
     background-color: #fdddcf;
 }
+i{
+    letter-spacing: .30rem;
+}
 .jumbotron-custom{
     padding: 5px;   
 }
@@ -146,15 +149,32 @@ a.overlay{
     border:none;
 }
 .modal-footer{
+    display: inline-block;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     border: 2px double #fdddcf;
     border-width: medium;
     border-top: none;
     background-image: linear-gradient(to right, rgba(180, 202, 212,0.9),rgba(192,192,192,0.6));
+    font-size: 1.45rem;
+    letter-spacing: .30rem;
 }
+
+.heart-likes{
+    text-align: right;
+}
+.social-icons a{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #000000;
+}
+.fa-1x{
+    font-size: 1.5em;
+}
+
 #modalLike{
     color: #ffffff;
+    
 }
 #modalLike:hover{
     color:cyan;
@@ -209,6 +229,14 @@ a.overlay{
         padding-left: 10px;
         padding-right:10px;
     }
+    .social-icons a{
+        font-size: 1rem;
+    }
+    .social-icons{
+        padding: 0;
+        margin-left: 10px
+    }
+    
     #imgContainer22{
         margin-top: 0;
     }

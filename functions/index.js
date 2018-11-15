@@ -26,7 +26,7 @@ app.get('/gallery',function(req,res,next){
 });
 
 app.get('/ceremony',function(req,res,next){
-   res.render('ceremony',{title: "Ceremony"}) 
+   res.render('ceremony',{title: "Ceremony"}); 
 });
  exports.app = functions.https.onRequest(app);
 

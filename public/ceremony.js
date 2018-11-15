@@ -21,7 +21,7 @@ $('#picturePopupModal').on('show.bs.modal',function(event){
         totalLikes = snapshot.val().numlikes;
         document.getElementById('modalimg').src = snapshot.val().location;
         document.getElementById('modalLike').setAttribute("onclick",'likePicture("'+img_number_string+'")');
-        document.getElementById('modalLike').innerHTML = "&#10084  " + totalLikes;
+        document.getElementById('modalLike').innerHTML = "        " + totalLikes;
     });
 });
 
@@ -39,7 +39,7 @@ function getLikes(x){
     console.log(picRef);
     var picture = firebase.database().ref(picRef);
     picture.once('value',function(snapshot){
-        document.getElementById("pic"+ x).innerHTML = "&#10084    " + snapshot.val().numlikes;
+        document.getElementById("pic"+ x).innerHTML = "        " + snapshot.val().numlikes;
     });
     
 }
@@ -87,9 +87,12 @@ function likePicture(x){
         
         //ref.child('numlikes').set(totalLikes);
         //pics.push(totalLikes);
+        //Heart Symbol: &#10084
         ref.child('numlikes').set(totalLikes);
-        document.getElementById("pic"+x).innerHTML = "&#10084    " + totalLikes;
-        document.getElementById("modalLike").innerHTML = "&#10084 "+totalLikes;
+        
+        document.getElementById("pic"+x).innerHTML = "        " + totalLikes;
+        
+        document.getElementById("modalLike").innerHTML = "        "+totalLikes;
         console.log("there is now " + totalLikes + " likes");
     });
     
@@ -98,3 +101,59 @@ function likePicture(x){
 function test(x){
     console.log("Picture Like ID: "+x);
 }
+
+$('.popupTwitter').click(function(event){
+    console.log("Twitter has been selected.")
+   let width = 575,
+       height = 430,
+       left = ($(window).width() - width) / 2,
+       top = ($(window).height() - height) / 2,
+       url =  this.href,      
+       opts = 'status=1' +
+            ',width='+ width +
+            ',height=' +height+
+            ',top=' + top +
+            ',left=' + left;
+     
+    window.open(url,'twitter',opts);
+    
+    
+    return false;
+});
+
+$('#popupFacebook').click(function(event){
+    console.log("facebook has been selected.")
+   let width = 575,
+       height = 400,
+       left = ($(window).width() - width) / 2,
+       top = ($(window).height() - height) / 2,
+       url =  this.href,      
+       opts = 'status=1' +
+            ',width='+ width +
+            ',height=' +height+
+            ',top=' + top +
+            ',left=' + left;
+     
+    window.open(url,'facebook',opts);
+    
+    
+    return false;
+});
+$('#popupGooglePlus').click(function(event){
+    console.log("facebook has been selected.")
+   let width = 575,
+       height = 400,
+       left = ($(window).width() - width) / 2,
+       top = ($(window).height() - height) / 2,
+       url =  this.href,      
+       opts = 'status=1' +
+            ',width='+ width +
+            ',height=' +height+
+            ',top=' + top +
+            ',left=' + left;
+     
+    window.open(url,'google+',opts);
+    
+    
+    return false;
+});
