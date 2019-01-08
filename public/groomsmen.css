@@ -1,0 +1,14 @@
+#groomsday{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px){
+    #groomsday h1{
+        text-align: center;
+    }
+    #groomsday p{
+        margin-bottom: 2rem;
+    }
+    
+}

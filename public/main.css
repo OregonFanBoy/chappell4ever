@@ -2,6 +2,7 @@ body{
     font-family: "Courier New";
     background-image: url('https://firebasestorage.googleapis.com/v0/b/nodemoduletest.appspot.com/o/Assets%2FBackground.PNG?alt=media&token=cc3f3444-5247-404c-9e45-b2aeb7a4bfcd');
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .navbar{
@@ -17,6 +18,10 @@ body{
     margin: 0 10px 0 10px;
 }
 
+.nav-link:hover{
+    color: #fdddcf !important;
+}
+
 hr{
     background-color: #fdddcf;
 }
@@ -30,7 +35,7 @@ hr{
 }
 
 .header-color{
-    color: #fdddcf;
+    color: #fdddcf !important;
 }
 
 .txt-light{
@@ -51,8 +56,49 @@ hr{
     margin: auto;
 }
 
+#mainfooter{
+    background-color: rgba(180,202,212,0.15);
+    padding-bottom: 25px;
+}
+#mainfooter h2{
+    font-size: 2.5rem;
+}
 
+#mainfooter hr{
+    
+}
 
+#mainfooter a{
+    text-decoration: none;
+}
+
+#mainfooter a:hover{
+    color: #b4cad4 !important;
+}
+#mainfooter form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.fnamefield, .lnamefield{
+    max-width: 100%;
+}
+.fnamefield{
+    padding-right: 6rem;
+}
+.messagefield{
+    width: 100%;
+}
+#contact textarea{
+    height: 10rem;
+    resize: none;
+}
+#contact input[type='text'], #contact textarea{
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
 /**************************************************/
 /***           Photo Styles                     ***/
 /**************************************************/
@@ -143,11 +189,25 @@ div.modal-content{
     margin: 0px;
 }
 
+#footer-content-container{
+    max-width: 100%;
+    width: 100%;
+}
+
+fieldset button{
+    width: 200%;
+    border-radius: 5px;
+}
+
+fieldset button:hover{
+    cursor: pointer;
+    background-color: #b4cad4;
+    color: #ffffff;
+    transition: 0.4s;
+}
 /**************************************************/
 /***                                            ***/
 /**************************************************/
-
-
 @media (max-width: 600px){
     .navbar{
         margin-top: 0px;

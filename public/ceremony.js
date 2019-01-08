@@ -33,34 +33,32 @@ $('#likePicture').on('show.bs.modal',function(event){
    
 
 function getLikes(x){
-    console.log("You are getting likes for picture ID: "+ x);
+    console.log("Picture ID: "+ x + " is getting attibute of likes.");
     
     var picRef = "/ceremonyPics/pic0"+x;
-    console.log(picRef);
+    
     var picture = firebase.database().ref(picRef);
     picture.once('value',function(snapshot){
+        console.log("Picture ID: "+ x + " contains " + snapshot.val().numlikes + " likes.")
         document.getElementById("pic"+ x).innerHTML = "        " + snapshot.val().numlikes;
     });
     
 }
 
 function loadPictures(){
-    //const gallery = firebase.database().ref('/galleryPics');
     
+    console.log("Load web gallery has been called.");
     gallery.once('value',function(snapshot){
-       var galObjects = snapshot.numChildren();
-        
+        console.log("Getting number of objects in database that is referenced to the web page.");
+        var galObjects = snapshot.numChildren();
         var index = 1;
         var picLikes;
-        console.log("number of objects: "+ galObjects);
+        console.log("Gallery reference contains "+ galObjects + " objects.");
         snapshot.forEach(function(child){
             console.log(child.key);
             document.getElementById("gal"+index.toString()).src = child.val().location;
-            picLikes = child.val().numlikes;
-          //  console.log("Num Likes: "+ picLikes.toString());
-           //console.log(child.key+ ": "+ child.val().location); 
+            picLikes = child.val().numlikes; 
             console.log(child.key+ ": "+ child.val().numlikes);
-          //  document.getElementById("pic"+index.toString()).innerHTML = "&#10084    " + picLikes; 
             index++;
             
         });
@@ -70,40 +68,37 @@ function loadPictures(){
 
 
 function likePicture(x){
-    console.log("We want to like the pciture ID: "+x);
+    console.log("Picture ID: "+x +" has been selected to be liked.");
     var totalLikes;
     
     var picRef = "/ceremonyPics/pic0"+x;
     var picture = firebase.database().ref(picRef);
     var pics = firebase.database().ref('/ceremonyPics');
     var ref = pics.child('pic0'+x);
-    console.log('We have liked the picture');
+    console.log('Picture ID: '+ x +' reference has been instatiated.');
     picture.once('value',function(snapshot){
         
         picObject = snapshot.val();
         totalLikes = picObject.numlikes;
-        console.log("There are "+ totalLikes + " likes");
+        console.log("Picture ID: "+x+" has" + totalLikes + " likes.");
         totalLikes ++;
         
         //ref.child('numlikes').set(totalLikes);
         //pics.push(totalLikes);
         //Heart Symbol: &#10084
         ref.child('numlikes').set(totalLikes);
+        console.log("Picture ID: "+x + " likes field has been updated in the database to "+ totalLikes+ " likes.");
         
         document.getElementById("pic"+x).innerHTML = "        " + totalLikes;
         
         document.getElementById("modalLike").innerHTML = "        "+totalLikes;
-        console.log("there is now " + totalLikes + " likes");
-    });
-    
-    
-}
-function test(x){
-    console.log("Picture Like ID: "+x);
+        
+    });    
 }
 
+
 $('.popupTwitter').click(function(event){
-    console.log("Twitter has been selected.")
+    console.log("Twitter Share Icon has been selected.")
    let width = 575,
        height = 430,
        left = ($(window).width() - width) / 2,
@@ -122,7 +117,7 @@ $('.popupTwitter').click(function(event){
 });
 
 $('#popupFacebook').click(function(event){
-    console.log("facebook has been selected.")
+    console.log("Facebook Share Icon has been selected.")
    let width = 575,
        height = 400,
        left = ($(window).width() - width) / 2,
@@ -140,7 +135,7 @@ $('#popupFacebook').click(function(event){
     return false;
 });
 $('#popupGooglePlus').click(function(event){
-    console.log("facebook has been selected.")
+    console.log("Goolge+ Share Icon has been selected.")
    let width = 575,
        height = 400,
        left = ($(window).width() - width) / 2,

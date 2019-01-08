@@ -3,21 +3,24 @@ extends layout
 block content
     
     
-    
-    link(rel='stylesheet' href='ceremony.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css')
+    link(rel='stylesheet', href='main.css')
+    link(rel='stylesheet' href='photostyles.css')
     .container
         .row
             .col-sm-12
                 .jumbotron.jumbotron-fluid.jumbotron-custom.bg-transparent
                     .container.header-color.txt-center
+                        a#top
                         h1.display-3 Our Ceremony
+                             
                         h4.display-4 The start of a new adventure
         .row.row-1
             
             .col-sm-12.col-lg-5
                 .content.is-large
-                    h1.desktop.txt-teal A Special Day
-                    p.txt-teal
+                    h1.desktop.header-color A Special Day
+                    p.header-color
                         | On September 22, 2018. Frank and Amanda held a special ceremony on the Rogue River in Gold Hill, Oregon at Tea Pot on Wheels.
                         | The day was filled with excitement, joy and love with friends and family from all around. Frank and Amanda felt honored and privlaged to
                         | have such a beautiful day in ceremony to share a lifetime of love and commitment with friends and family. In case you missed the big day or just want to recap what took place, then you'll love what lays ahead.
@@ -249,7 +252,7 @@ block content
                             .photobox.photobox_style.img-border-double.img-border-bronze
                         
                                         .photobox_previewbox
-                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='"20"', onmouseover='getLikes("20")')
+                                            a.overlay(data-toggle='modal', data-target="#picturePopupModal", data-whatever='20', onmouseover='getLikes("20")')
                                             img#gal20.photobox_preview.img-fluid.img-center      
                                             span.photobox_label
                                                 a(onclick='likePicture("20")',title='Like Photo')
@@ -314,7 +317,7 @@ block content
                 hr
                 .columns.is-centered
                     .column.is-half
-                        img(src='https://firebasestorage.googleapis.com/v0/b/chappell4ever.appspot.com/o/Assets%2Fceremony%2FIMG_7894.jpg?alt=media&token=468b079a-f8b8-4ee5-b158-cef6629de2b8')
+                        img(src='https://imageshack.com/i/pnjMAzLpj')
                 hr
     
     #picturePopupModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
@@ -341,5 +344,5 @@ block content
                         .col.heart-likes
                             a(onclick='test(this)',title='Like Photo')
                                 i#modalLike.far.fa-heart
-
+    
     script(src='ceremony.js')
