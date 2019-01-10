@@ -93,8 +93,6 @@ app.post('/sendmailendpoint', (req, res)=>{
     console.log("Mail body created. Initializing transporter...");
   let transporter = nodemailer.createTransport({
     service: 'gmail',
-    //I set up a fake email address for this implementation.
-    //Don't expect to find anything usefull here.
     auth:{
       user: 'Redacted',
       pass: 'Redacted'
