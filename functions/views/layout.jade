@@ -107,11 +107,11 @@ html
                                             h2.txt-center.txt-light Send Your Thoughts
                                             form(id='contact',method='post')
                                                 fieldset.fnamefield
-                                                    input(id='fname',placeholder='First Name', name='firstname', type='text',tabindex='1',required='', autofocus='')
+                                                    input(id='fname',placeholder='First Name', name='firstname', type='text',tabindex='1',required='', autofocus='',pattern='^[A-Za-z]+',title='Please Enter Letters Only.')
                                                 fieldset.lnamefield
-                                                    input(id='lname',placeholder='Last Name', name='lastname',type='text',tabindex='2',required='')
+                                                    input(id='lname',placeholder='Last Name', name='lastname',type='text',tabindex='2',required='',pattern='^[A-Za-z]+',title='Please Enter Letters Only.')
                                                 fieldset.messagefield
-                                                    textarea(id='message-text',placeholder='Leave your thougts here...',name='message',tabindex='3',required='')
+                                                    textarea(id='message-text',placeholder='Leave your thougts here...',name='message',tabindex='3',required='', onclick='resetTextArea()')
                                                 fieldset
                                                     button(type='submit') Send
                                             
