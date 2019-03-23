@@ -83,6 +83,12 @@ hr{
 .fnamefield, .lnamefield{
     max-width: 100%;
 }
+
+.fnamefield #fname, .lnamefield #lname{
+    max-width: 125% !important;
+    width: 125% !important;
+}
+
 .fnamefield{
     padding-right: 6rem;
 }
@@ -208,6 +214,68 @@ fieldset button:hover{
 /**************************************************/
 /***                                            ***/
 /**************************************************/
+@media (max-width: 1505px){
+    .lnamefield #lname{
+        max-width: 115% !important;
+        width: 115% !important;
+    }
+}
+
+@media(max-width: 1450px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 110% !important;
+        width: 110% !important;
+    }
+}
+
+@media(max-width: 1425px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 105% !important;
+        width: 105% !important;
+    }
+}
+@media(max-width: 1400px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 1387px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 150% !important;
+        width: 150% !important;
+    }
+}
+
+@media(max-width: 768px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 135% !important;
+        width: 135% !important;
+    }
+}
+
+@media(max-width: 670px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 125% !important;
+        width: 125% !important;
+    }
+}
+
+@media(max-width: 645px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 115% !important;
+        width: 115% !important;
+    }
+}
+
+@media(max-width: 625px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 105% !important;
+        width: 105% !important;
+    }
+}
+
 @media (max-width: 600px){
     .navbar{
         margin-top: 0px;
@@ -229,5 +297,82 @@ fieldset button:hover{
     .logo-size{
         width: 75%;
     }
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 100% !important;
+        width: 100% !important;
+    }
 }
 
+@media(max-width: 593px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 170% !important;
+        width: 170% !important;
+    }
+}
+
+@media(max-width: 420px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 165% !important;
+        width: 165% !important;
+    }
+}
+@media(max-width: 410px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 160% !important;
+        width: 160% !important;
+    }
+}
+
+@media(max-width: 400px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 155% !important;
+        width: 155% !important;
+    }
+}
+
+@media(max-width: 390px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 150% !important;
+        width: 150% !important;
+    }
+}
+
+@media(max-width: 380px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 148% !important;
+        width: 148% !important;
+    }
+}
+@media(max-width: 375px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 147% !important;
+        width: 147% !important;
+    }
+}
+@media(max-width: 370px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 146% !important;
+        width: 146% !important;
+    }
+}
+/* Galaxy S5 view */
+@media (max-width: 360px){
+    /* Contact form on main footer */
+    .fnamefield #fname{
+        max-width: 145% !important;
+        width: 145% !important;
+    }
+    
+    .lnamefield #lname{
+        max-width: 150% !important;
+        width: 135% !important;
+    }
+}
+
+
+@media(max-width: 320px){
+    .fnamefield #fname, .lnamefield #lname{
+        max-width: 120% !important;
+        width: 120% !important;
+    }
+}
