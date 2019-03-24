@@ -1,6 +1,6 @@
 $( "form" ).on( "submit",function(event){
     console.log("Submit button was clicked.");
-    if (validateMessage()){
+   // if (validateMessage()){
         console.log("All inputs are true.")
         event.preventDefault();
         var data = $(this).serialize();
@@ -16,10 +16,10 @@ $( "form" ).on( "submit",function(event){
             }
         });
         console.log("out of success.")
-    }else{
+    //}else{
         
-        return false;
-    }
+      //  return false;
+    //}
     
 });
 
@@ -28,11 +28,11 @@ function resetTextArea(){
     document.getElementById('message-text').style.borderColor = "rgb(169,169,169)";    
 }
 
-
+/*
 function validateMessage(){
     let message = document.forms['contact']['message-text'].value;
-    let isValidText =/^[A-Za-z][a-zA-Z0-9\.\?,!\s]*$/g;
-    let errorMessage = 'Invalid Input! Enter letters, numbers or symbols (. , ! ?)';
+   let isValidText =/^[A-Za-z][a-zA-Z0-9\.\?,!\s]*$/g;
+    let errorMessage = 'Invalid Input! Enter letters, numbers or symbols (. , ! ?)';  
     if(message.match(isValidText)){
         setValidInputField('message-text');
         return true;
@@ -41,7 +41,7 @@ function validateMessage(){
         return false;
     }
 }
-
+*/
 function setValidInputField(idname){
     document.getElementById(idname).style.borderColor = "transparent";
 }

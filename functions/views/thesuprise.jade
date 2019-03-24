@@ -11,15 +11,16 @@ block content
                     .container.header-color.txt-center
                         h1.display-3 The Big Suprise
                         h4.display-4 Unreveled
-        .row
+        .row.row-1
             .col-sm-12.col-lg-5
                 .content.is-large
-                    h1.header-color Meet Foxy
-                    p.header-color
+                    h1.desktop.header-color Meet Foxy
+                    p#foxy-intro.header-color
                         | When Amanda was a young girl competing in barrel racing, she met Foxy. It wasn't too long after meeting Foxy that she came
                         | to live with Amanda and the both eventually became best friends. After school and on the weekends, Amanda and Foxy would always be seen side to side. 
                         | The two were inseparable. And what better way to make the bride happy by surprising her with her best friend at the wedding?
             .col-sm-12.col-lg-7
+                h1#foxy.mobile.header-color.txt-center Meet Foxy
                 img.img-fluid.img-center.img-border-double.img-border-bronze(src='https://imageshack.com/i/pmyyswy7j')
         hr
         .row
@@ -182,16 +183,17 @@ block content
                                     a(onclick='likePicture("16")',title='Like Photo')
                                         i#pic16.far.fa-heart
         hr
-        .row(style="margin-bottom: 20px;")
+        .row.row-1(style="margin-bottom: 20px;")
             .col-sm-12.col-lg-5
                 .content.is-large
-                    h1.header-color A Special Thank You
-                    p.header-color
+                    h1.desktop.header-color A Special Thank You
+                    p#foxy-thanks.header-color
                         | Thanks to a wonderful woman Kristy, Amanda's day was filled with excitement and happiness.
                         | A few years ago, Kristy bought Foxy from Amanda and gave Foxy a warm and comforting new home. 
                         | Over the years, Kristy would keep Amanda updated with Foxy. It was clear that Amanda holds a great love for Foxy and Frank knew this.
                         | Which is why he reached out to Kristy for her help to make Amanda's big day even more special.
             .col-sm-12.col-lg-6
+                h1#foxy.mobile.header-color.txt-center(style="border-style: none;") A Special Thank You
                 img.img-fluid.img-center.img-border-double.img-border-bronze(src='https://imageshack.com/i/pm40b5vYj', alt="Foxy with Kristy")
     #picturePopupModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
         .modal-dialog.modal-dialog-centered.modal-lg(role='document')

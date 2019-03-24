@@ -248,10 +248,68 @@ fieldset button:hover{
     }
 }
 
+@media(max-width: 1024px){
+    .navbar-nav{
+        font-size: 1.4rem;
+    }
+    #ceremony-title{
+        font-size: 2.5rem;
+    }
+    #ceremony-intro{
+        font-size: 0.9rem;
+    }
+    h3#photos-title{
+        font-size: 4.2rem;
+    }
+    h6#photos-subtitle{
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    h1#bng-introtitle{
+        font-size: 2rem;
+    }
+    #bng-intro{
+        font-size: 0.9rem;
+    }
+    #family{
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
 @media(max-width: 768px){
     .fnamefield #fname, .lnamefield #lname{
         max-width: 135% !important;
         width: 135% !important;
+    }
+    #ceremony-title{
+        font-size: 2rem;
+    }
+    h1#ceremony-title{
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+    h3#photos-title{
+        font-size: 3.6rem;
+    }
+    h6#photos-subtitle{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    #bng-title{
+        font-size:3.5rem;
+    }
+    h1#bng-introtitle{
+        font-size: 3.5rem;
+    }
+    #bng-subtitle{
+        font-size: 2.5rem;
+    }
+    #reception-title{
+        font-size: 3rem;
+    }
+    #family{
+        font-size: 3rem;
     }
 }
 
@@ -307,6 +365,29 @@ fieldset button:hover{
     .fnamefield #fname, .lnamefield #lname{
         max-width: 170% !important;
         width: 170% !important;
+    }
+}
+
+@media(max-width:426px){
+    h3#photos-title{
+        font-size: 3rem;
+    }
+    h6#photos-subtitle{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    #bng-title{
+        font-size: 2rem;
+    }
+    h1#bng-introtitle{
+        font-size: 2rem;
+    }
+    #bng-subtitle{
+        font-size: 1.5rem;
+    }
+    #reception-title{
+        font-size: 2rem;
     }
 }
 
@@ -375,4 +456,39 @@ fieldset button:hover{
         max-width: 120% !important;
         width: 120% !important;
     }
+    #ceremony-title{
+        font-size: 1.4rem;
+    }
+    #ceremony-intro{
+        font-size: 0.7rem;
+        margin-top:0;
+    }
+    h3#photos-title{
+        font-size:2rem;
+    }
+    h6#photos-subtitle{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        margin-top 0.5rem;
+    }
+    h1#bng-introtitle{
+        font-size:1.5rem;
+    }
+    #bng-intro{
+        font-size:0.7rem;
+    }
+    #reception-title{
+        font-size: 1.8rem;
+    }
+    #wedding-title{
+        font-size:2rem;
+    }
+    #wedding-photo-title{
+        font-size:1.5rem;
+    }
+    #wedding-photo-subtitle{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
 }

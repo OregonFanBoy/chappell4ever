@@ -179,6 +179,39 @@ a.overlay{
 #modalLike:hover{
     color:cyan;
 }
+
+@media(max-width: 1024px){
+    #foxy-thanks{
+        font-size: 0.8rem;
+    }
+    #foxy-intro{
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px){
+    .row.row-1{
+        flex-direction: column-reverse;
+    }
+    .desktop{
+        visibility: collapse;
+        height: 0;
+    }
+    .mobile{
+        visibility: visible;
+        height: auto;
+        
+    }
+    
+    #foxy{
+        font-size: 4rem;
+        padding-bottom: 2rem;
+    }
+    #foxy-thanks{
+        font-size:1rem;
+    }
+}
+
 @media (max-width: 600px){
     body{
         background-size: auto;
@@ -200,6 +233,10 @@ a.overlay{
         font-size: 1rem;
         margin-top: 1.5rem;
     }
+    #family{
+        margin-top: 0;
+        font-size: 2rem;
+    }
     h6.display-4{
         font-size: 1.25rem;
         margin-top: 1.5rem;
@@ -208,22 +245,11 @@ a.overlay{
     h2, p{
         margin-top: 1.5rem;
     }
-    p{
+    p,#foxy-thanks{
         font-size: .85rem;
         line-height: 1.4;
     }
-    .row.row-1{
-        flex-direction: column-reverse;
-    }
-    .desktop{
-        visibility: collapse;
-        height: 0;
-    }
-    .mobile{
-        visibility: visible;
-        height: auto;
-        
-    }
+    
     
     .columns{
         padding-left: 10px;
@@ -241,4 +267,17 @@ a.overlay{
         margin-top: 0;
     }
     
+    #foxy{
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media(max-width: 320px){
+    #family{
+        font-size: 1.3rem;
+    }
+    #foxy-thanks,#foxy-intro{
+        font-size: 0.7rem;
+    }
 }
